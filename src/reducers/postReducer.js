@@ -8,6 +8,8 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case FETCH_POSTS:
+      debugger;
+      console.log("reducer");
       return {
         ...state,
         items: action.payload
