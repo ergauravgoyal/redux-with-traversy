@@ -19,7 +19,7 @@ export function createPost(postData) {
     console.log("createPosts Action called");
     fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
-      header: {
+      headers: {
         "content-type": "application/json"
       },
       body: JSON.stringify(postData)
