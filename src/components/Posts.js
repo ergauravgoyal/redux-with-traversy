@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux"; //Connect components with Redux Store that is provided by provider component
 import { fetchPosts } from "../actions/postActions";
 
@@ -22,6 +23,10 @@ class Posts extends Component {
   }
 }
 
+Posts.propTypes = {
+  fetchPosts: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired
+};
 const mapStateToProps = state => ({
   posts: state.posts.items // we are getting this post from rootReducer
 });
